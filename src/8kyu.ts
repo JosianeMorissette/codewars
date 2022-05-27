@@ -79,3 +79,7 @@ export const makeNegative2 = (num: number): number => {
 };
 
 
+// Find the smallest integer in the array
+export function findSmallestInt(args: number[]): number {
+    return Math.min(...args);
+}
