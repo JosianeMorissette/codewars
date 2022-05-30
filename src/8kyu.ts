@@ -83,3 +83,9 @@ export const makeNegative2 = (num: number): number => {
 export function findSmallestInt(args: number[]): number {
     return Math.min(...args);
 }
+
+
+// Function 3 - multiplying two numbers
+export function multiply(a: number, b: number): number {
+    return a * b
+}
