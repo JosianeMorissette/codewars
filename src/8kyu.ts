@@ -89,3 +89,13 @@ export function findSmallestInt(args: number[]): number {
 export function multiply(a: number, b: number): number {
     return a * b
 }
+
+
+//Opposites Attract
+export function lovefunc(flower1: number, flower2: number): boolean {
+    return (flower1 % 2 == 0) === (flower2 % 2 == 0) ? false : true;
+}
+
+export function lovefuncBest(flower1: number, flower2: number): boolean {
+    return flower1 % 2 != flower2 % 2;
+}
