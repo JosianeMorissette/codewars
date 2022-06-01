@@ -99,3 +99,36 @@ export function lovefunc(flower1: number, flower2: number): boolean {
 export function lovefuncBest(flower1: number, flower2: number): boolean {
     return flower1 % 2 != flower2 % 2;
 }
+
+// Fake binary
+export const fakeBin = (x: string): string => {
+
+    return x
+        .split("")
+        .map(Number)
+        .map((elem): number => {
+            if (elem < 5) {
+                return 0
+            } else {
+                return 1
+            }
+        })
+        .map(String)
+        .join("")
+
+};
+
+
+export const fakeBinSimilar = (x: string): string =>
+    x
+        .split('')
+        .map(el => (Number(el) < 5 ? 0 : 1))
+        .join('');
+
+export const fakeBinBest = (x: string): string =>
+    x.replace(/\d/g, n => Number(n) < 5 ? '0' : '1');
+/*
+g is a regular expression flag which forces the expression to match all digits. 
+By default, this expression would only match the first digit. 
+ Therefore, the code replaces all digits (using the .replace in x with 0 if they are smaller than 5 or 1 otherwise
+*/
