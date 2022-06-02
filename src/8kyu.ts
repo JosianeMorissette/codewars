@@ -106,21 +106,10 @@ export const fakeBin = (x: string): string => {
     return x
         .split("")
         .map(Number)
-        .map((elem): number => {
-            if (elem < 5) {
-                return 0
-            } else {
-                return 1
-            }
-        })
+        .map(el => el < 5 ? 0 : 1)
         .map(String)
         .join("")
 
 };
 
 
-export const fakeBinSimilar = (x: string): string =>
-    x
-        .split('')
-        .map(el => (Number(el) < 5 ? 0 : 1))
-        .join('');
