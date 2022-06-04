@@ -112,4 +112,9 @@ export const fakeBin = (x: string): string => {
 
 };
 
+// Are You Playing Banjo?
+export function areYouPlayingBanjo(name: string): string {
 
+    return name.toLowerCase().charAt(0) === "r" ? name + " plays banjo" : name + " does not play banjo"
+
+}
