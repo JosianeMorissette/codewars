@@ -20,3 +20,35 @@ export function high(str: string): string {
         .reduce((a, b) => (b[1] > a[1] ? b : a))[0]
 }
 
+
+// Find the odd int
+export const findOdd = (xs: number[]): number => {
+
+    let x = xs.find((num) => {
+        let count = 0
+        xs.forEach((el) => {
+            if (num === el) {
+                count = count + 1
+            }
+        })
+        return count % 2 === 0 ? false : true;
+    }
+    )
+    return x === undefined ? -1 : x
+
+};
+
+export const findOddOther = (items: number[]): number => {
+    const uniqueItems = Array.from(new Set(items))
+
+    for (const uniqueItem of uniqueItems) {
+        const numberOccurences = items.filter(item => item === uniqueItem).length
+        if (isOdd(numberOccurences)) return uniqueItem
+    }
+
+    throw new Error('none found')
+}
+
+function isOdd(num: number): boolean {
+    return num % 2 === 1
+}
