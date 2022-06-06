@@ -118,3 +118,10 @@ export function areYouPlayingBanjo(name: string): string {
     return name.toLowerCase().charAt(0) === "r" ? name + " plays banjo" : name + " does not play banjo"
 
 }
+
+// Counting sheep...
+export function countSheeps(sheepFlock: (boolean | undefined | null)[]): number {
+    return sheepFlock
+        .filter(Boolean)
+        .length
+}
