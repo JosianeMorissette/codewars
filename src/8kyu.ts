@@ -125,3 +125,9 @@ export function countSheeps(sheepFlock: (boolean | undefined | null)[]): number 
         .filter(Boolean)
         .length
 }
+
+
+// Invert values 1:40
+export function invert(array: number[]): number[] {
+    return array.map(el => -el);
+}
