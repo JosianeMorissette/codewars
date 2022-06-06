@@ -52,3 +52,12 @@ export const findOddOther = (items: number[]): number => {
 function isOdd(num: number): boolean {
     return num % 2 === 1
 }
+
+
+// Build a pile of Cubes
+
+export function findNbBest(m: number): number {
+    var n = 0;
+    while (m > 0) m -= Math.pow(++n, 3);
+    return m ? -1 : n
+}
