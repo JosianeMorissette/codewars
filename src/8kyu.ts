@@ -146,3 +146,9 @@ export function abbrevName(name: string): string {
         .toUpperCase()
     // "J.C"
 }
+
+// Switch it up!
+export function switchItUpBest(intNumber: number): string {
+    enum out { Zero, One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten };
+    return out[intNumber];
+}
