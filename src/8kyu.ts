@@ -131,3 +131,18 @@ export function countSheeps(sheepFlock: (boolean | undefined | null)[]): number 
 export function invert(array: number[]): number[] {
     return array.map(el => -el);
 }
+
+
+// Abbreviate a two word name
+export function abbrevName(name: string): string {
+    return name
+        // jean coutu
+        .split(" ")
+        //["jean", "coutu"]
+        .map(name => name[0])
+        // ["J", "c"]
+        .join('.')
+        // "j.c"
+        .toUpperCase()
+    // "J.C"
+}
