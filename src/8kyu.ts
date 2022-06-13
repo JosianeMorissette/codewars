@@ -157,3 +157,15 @@ export function switchItUpBest(intNumber: number): string {
 export function stringToNumber(str: string): number {
     return Number(str)
 }
+
+
+// DNA to RNA
+export function DNAtoRNA(dna: string): string {
+
+    return dna.split("").map(el => el === "T" ? "U" : el).join("")
+
+}
+
+export function DNAtoRNABest(dna: string): string {
+    return dna.replace(/T/g, 'U'); // By default string.replace in JavaScript will only replace the first matching value it finds. Adding the /g will mean that all of the matching values are replaced.
+}
