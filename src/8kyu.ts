@@ -152,3 +152,8 @@ export function switchItUpBest(intNumber: number): string {
     enum out { Zero, One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten };
     return out[intNumber];
 }
+
+//string to number
+export function stringToNumber(str: string): number {
+    return Number(str)
+}
