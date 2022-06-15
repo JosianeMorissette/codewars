@@ -169,3 +169,13 @@ export function DNAtoRNA(dna: string): string {
 export function DNAtoRNABest(dna: string): string {
     return dna.replace(/T/g, 'U'); // By default string.replace in JavaScript will only replace the first matching value it finds. Adding the /g will mean that all of the matching values are replaced.
 }
+
+
+// Messi goals function
+export function goals(laLigaGoals: number, copaDelReyGoals: number, championsLeagueGoals: number): number {
+    return laLigaGoals + copaDelReyGoals + championsLeagueGoals
+}
+
+export function goalsBest(...args: number[]) {
+    return args.reduce((a, b) => a + b);
+}
