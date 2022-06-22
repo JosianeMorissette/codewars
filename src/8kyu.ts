@@ -179,3 +179,39 @@ export function goals(laLigaGoals: number, copaDelReyGoals: number, championsLea
 export function goalsBest(...args: number[]) {
     return args.reduce((a, b) => a + b);
 }
+
+
+
+// cockroach km/h to cm/s (4 mins)
+export function cockroachSpeed(s: number): number {
+    return Math.floor(s * 100000 / 3600)
+}
+
+
+
+// Correct the mistales of the character recognition
+export function correct(s: string): string {
+    return s
+        .split("")
+        .map(
+            function (el: string | number) {
+
+                if (el === 5) { el = "S" }
+                else if (el === 0) { el = "O" }
+                else if (el === 1) { el = "I" }
+            }
+        ).join("")
+}
+export function correctBest(s: string): string {
+    return s !== '' ? s.split('').map(item => {
+        if (item === '1') return 'I'
+        else if (item === '0') return 'O'
+        else if (item === '5') return 'S'
+        else return item
+    }).join('') : s
+}
+
+// You can't code under pressure
+export function doubleInteger(i: number): number {
+    return i * 2
+}
