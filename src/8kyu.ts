@@ -215,3 +215,33 @@ export function correctBest(s: string): string {
 export function doubleInteger(i: number): number {
     return i * 2
 }
+
+
+// Convert a Boolean to a String
+export function booleanToString(b: boolean): string {
+    return b ? "True" : "False"
+};
+
+
+export function booleanToStringBest(b: boolean): string {
+    return String(b)
+};
+
+// Cat years, Dog years
+
+export function humanYearsCatYearsDogYears(humanYears: number): [number, number, number] {
+    let first2Years = 15 + (humanYears > 1 ? 9 : 0)
+
+    let catYears = first2Years + (humanYears > 2 ? (humanYears - 2) * 4 : 0)
+
+    let dogYears = first2Years + (humanYears > 2 ? (humanYears - 2) * 5 : 0)
+
+    return [humanYears, catYears, dogYears];
+}
+
+
+export const humanYearsCatYearsDogYearsBest = (num: number): [number, number, number] => ([
+    num,
+    num === 1 ? 15 : 15 + 9 + (4 * (num - 2)),
+    num === 1 ? 15 : 15 + 9 + (5 * (num - 2))
+  ]);
